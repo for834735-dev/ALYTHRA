@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #0a0e11;
+    --bg-surface: #12191f;
+    --bg-surface-elevated: #1a232b;
+    --border-color: #2a3744;
+    --border-accent: #10b981;
+    --text-primary: #f5ebe0;
+    --text-muted: #94a3b8;
+    --accent-emerald: #10b981;
+    --accent-cyan: #06b6d4;
+    --accent-magenta: #ec4899;
+    --accent-gold: #f59e0b;
+    --shadow-pixel: 3px 3px 0px #000000;
+  }
+
+  /* Light mode - Cyber Birch */
+  [data-theme="light"] {
+    --bg-main: #f4ede4;
+    --bg-surface: #ffffff;
+    --bg-surface-elevated: #e8ded2;
+    --border-color: #d1c2b0;
+    --border-accent: #059669;
+    --text-primary: #1e293b;
+    --text-muted: #64748b;
+    --accent-emerald: #059669;
+    --accent-cyan: #0891b2;
+    --accent-magenta: #db2777;
+    --accent-gold: #d97706;
+    --shadow-pixel: 3px 3px 0px #2a2018;
+  }
+
+  /* Emerald Matrix theme */
+  [data-theme="emerald"] {
+    --bg-main: #05160e;
+    --bg-surface: #0a2519;
+    --bg-surface-elevated: #113626;
+    --border-color: #1a523a;
+    --border-accent: #10b981;
+    --text-primary: #e6f9ef;
+    --text-muted: #6ee7b7;
+    --accent-emerald: #10b981;
+    --accent-cyan: #34d399;
+    --accent-magenta: #f43f5e;
+    --accent-gold: #fbbf24;
+    --shadow-pixel: 3px 3px 0px #020b07;
+  }
+
+  /* Amethyst Nether Void theme */
+  [data-theme="amethyst"] {
+    --bg-main: #110d1a;
+    --bg-surface: #1d162d;
+    --bg-surface-elevated: #281e3d;
+    --border-color: #433267;
+    --border-accent: #a855f7;
+    --text-primary: #f3e8ff;
+    --text-muted: #c084fc;
+    --accent-emerald: #10b981;
+    --accent-cyan: #38bdf8;
+    --accent-magenta: #e879f9;
+    --accent-gold: #facc15;
+    --shadow-pixel: 3px 3px 0px #08050e;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+  }
+}
+
+.font-pixel {
+  font-family: 'Press Start 2P', monospace;
+}
+
+.font-retro {
+  font-family: 'Silkscreen', monospace;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Pixel indie background grid pattern */
+.pixel-grid-pattern {
+  background-image: radial-gradient(rgba(16, 185, 129, 0.08) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Subtle scanlines effect */
+.scanlines-overlay {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+}
+
+/* Minecraft-style pixel box with hard pixel borders and crisp drop shadow */
+.pixel-panel {
+  background-color: var(--bg-surface);
+  border: 2px solid var(--border-color);
+  box-shadow: var(--shadow-pixel);
+  transition: all 0.15s ease-in-out;
+}
+
+.pixel-panel-hover:hover {
+  border-color: var(--border-accent);
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 0px #000000;
+}
+
+.pixel-btn {
+  border: 2px solid #000000;
+  box-shadow: 2px 2px 0px #000000;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+  user-select: none;
+}
+
+.pixel-btn:hover {
+  filter: brightness(1.08);
+}
+
+.pixel-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #000000;
+}
+
+/* Custom retro scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d1318;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a3744;
+  border: 1px solid #000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #10b981;
+}

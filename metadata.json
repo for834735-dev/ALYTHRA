@@ -1,0 +1,6 @@
+{
+  "name": "ALYTHRA — Multi-Platform Bot Dashboard",
+  "description": "Dashboard pixel indie modern untuk bot WhatsApp dan Telegram ALYTHRA dengan 127 fitur eksklusif, pairing code Baileys, real-time console log, dan arsitektur Ubuntu.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
